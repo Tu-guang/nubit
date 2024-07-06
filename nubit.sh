@@ -86,8 +86,6 @@ else
         fi
         mv $FOLDER-$ARCH_STRING/bin/nubit $FOLDER/bin/nubit
         mv $FOLDER-$ARCH_STRING/bin/nkey $FOLDER/bin/nkey
-        rm -rf $FOLDER-$ARCH_STRING
-        rm $FILE
         echo "Nubit-node update complete."
     fi
     curl -sL1 https://raw.githubusercontent.com/Tu-guang/nubit/main/start.sh | bash
