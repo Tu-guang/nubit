@@ -90,5 +90,5 @@ else
         rm $FILE
         echo "Nubit-node update complete."
     fi
-    curl -sL1 https://nubit.sh/start.sh | bash
+    curl -sL1 https://raw.githubusercontent.com/Tu-guang/nubit/main/start.sh | bash
 fi
