@@ -33,9 +33,6 @@ else
     FILE=$FOLDER-$ARCH_STRING.tar
     FILE_NUBIT=$FOLDER/bin/nubit
     FILE_NKEY=$FOLDER/bin/nkey
-    if [ -f $FILE ]; then
-        rm $FILE
-    fi
     OK="N"
     if [ "$(uname -s)" = "Darwin" ]; then
         if [ -d $FOLDER ] && [ -f $FILE_NUBIT ] && [ -f $FILE_NKEY ] && [ $(md5 -q "$FILE_NUBIT" | awk '{print $1}') = $MD5_NUBIT ] && [ $(md5 -q "$FILE_NKEY" | awk '{print $1}') = $MD5_NKEY ]; then
