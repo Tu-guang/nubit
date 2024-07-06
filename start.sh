@@ -32,16 +32,6 @@ if [ ! -d $dataPath ] || [ ! -d $dataPath/transients ] || [ ! -d $dataPath/block
     rm -rf $dataPath/data
     rm -rf $dataPath/index
     rm -rf $dataPath/inverted_index
-    URL=https://nubit.sh/nubit-data/lightnode_data.tgz
-    echo "Download light node data from URL: $URL"
-    if command -v curl >/dev/null 2>&1; then
-        curl -sLO $URL
-    elif command -v wget >/dev/null 2>&1; then
-        wget -q $URL
-    else
-        echo "Neither curl nor wget are available. Please install one of these and try again."
-        exit 1
-    fi
     mkdir $dataPath
     echo "Extracting data. PLEASE DO NOT CLOSE!"
     tar -xvf lightnode_data.tgz -C $dataPath
@@ -55,7 +45,7 @@ if [ ! -d $dataPath/keys ]; then
     cat output.txt
     rm output.txt
 elif [ ! -f $dataPath/config.toml ]; then
-    URL=https://nubit.sh/config.toml
+    URL=https://raw.githubusercontent.com/Tu-guang/nubit/main/config.toml
     echo "Recovering config file from URL: $URL"
     if command -v curl >/dev/null 2>&1; then
         curl -s $URL -o $dataPath/config.toml
