@@ -35,7 +35,6 @@ if [ ! -d $dataPath ] || [ ! -d $dataPath/transients ] || [ ! -d $dataPath/block
     mkdir $dataPath
     echo "Extracting data. PLEASE DO NOT CLOSE!"
     tar -xvf lightnode_data.tgz -C $dataPath
-    rm lightnode_data.tgz
 fi
 if [ ! -d $dataPath/keys ]; then
     echo "Initing keys..."
