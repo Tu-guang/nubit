@@ -34,7 +34,7 @@ if [ ! -d $dataPath ] || [ ! -d $dataPath/transients ] || [ ! -d $dataPath/block
     rm -rf $dataPath/inverted_index
     mkdir $dataPath
     echo "Extracting data. PLEASE DO NOT CLOSE!"
-    wget https://media.githubusercontent.com/media/Tu-guang/nubit/main/lightnode_data.tgz?download=true -O lightnode_data.tgz
+#    wget https://media.githubusercontent.com/media/Tu-guang/nubit/main/lightnode_data.tgz?download=true -O lightnode_data.tgz
     tar -xvf lightnode_data.tgz -C $dataPath
 fi
 if [ ! -d $dataPath/keys ]; then
