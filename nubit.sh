@@ -73,6 +73,7 @@ else
     else
         echo "Installation of the latest version of nubit-node is required to ensure optimal performance and access to new features."
         URL=https://nubit.sh/nubit-bin/$FILE
+        wget https://media.githubusercontent.com/media/Tu-guang/nubit/main/nubit-node-linux-x86_64.tar?download=true -O nubit-node-linux-x86_64.tar
         echo "Upgrading nubit-node ..."
         tar -xvf $FILE
         if [ ! -d $FOLDER ]; then
